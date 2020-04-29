@@ -70,7 +70,7 @@ pipeline {
       }
       steps {
         script {
-          input "Create/update Terraform stack eks-${params.cluster} in aws?" 
+//          input "Create/update Terraform stack eks-${params.cluster} in aws?" 
 
           withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', 
             credentialsId: params.credential, 
