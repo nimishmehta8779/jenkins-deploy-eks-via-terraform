@@ -11,11 +11,12 @@ provider "aws" {
 data "aws_region" "current" {
 }
 
+/*
 data "aws_availability_zones" "available" {
   state = "available"
   blacklisted_names = ["us-east-1e","us-east-1f"]
 }
-
+*/
 # Not required: currently used in conjuction with using
 # icanhazip.com to determine local workstation external IP
 # to open EC2 Security Group access to the Kubernetes cluster.
