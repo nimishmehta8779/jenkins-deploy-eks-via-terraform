@@ -10,7 +10,7 @@ resource "aws_vpc" "eks" {
   cidr_block = "${var.vpc-network}.0.0/16"
 
   tags = {
-    "Name"                                          = "eks-${var.cluster-name}"
+    "Name" = "eks-${var.cluster-name}"
     "kubernetes.io/cluster/eks-${var.cluster-name}" = "shared"
   }
 }
@@ -24,7 +24,7 @@ resource "aws_subnet" "eks" {
   vpc_id            = aws_vpc.eks.id
 
   tags = {
-    "Name"                                          = "eks-${var.cluster-name}"
+    "Name"  = "eks-${var.cluster-name}"
     "kubernetes.io/cluster/eks-${var.cluster-name}" = "shared"
   }
 }

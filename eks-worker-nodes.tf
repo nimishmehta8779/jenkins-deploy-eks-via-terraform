@@ -18,7 +18,7 @@ resource "aws_iam_role" "node" {
       "Effect": "Allow",
       "Principal": {
         "Service": "ec2.amazonaws.com"
-        
+
       },
       "Action": "sts:AssumeRole"
     }
@@ -112,7 +112,7 @@ USERDATA
 
 resource "aws_launch_configuration" "eks" {
   associate_public_ip_address = true
-  iam_instance_profile        = aws_iam_instance_profile.node.name
+  #iam_instance_profile        = aws_iam_instance_profile.node.name
   image_id                    = data.aws_ami.eks-worker.id
   instance_type               = var.inst-type
   name_prefix                 = "eks-${var.cluster-name}-"
