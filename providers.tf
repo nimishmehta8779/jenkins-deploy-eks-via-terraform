@@ -13,6 +13,7 @@ data "aws_region" "current" {
 
 data "aws_availability_zones" "available" {
   state = "available"
+  blacklisted_names = ["us-east-1e","us-east-1f"]
 }
 
 # Not required: currently used in conjuction with using
