@@ -4,12 +4,12 @@
 
 variable "aws_region" {
   description = "The AWS region to create things in."
-  default     = "eu-west-1"
+  default     = "us-east-1"
 }
 
 variable "cluster-name" {
   description = "EKS cluster name."
-  default     = "demo"
+  default     = "demoeks"
   type        = string
 }
 

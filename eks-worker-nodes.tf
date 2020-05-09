@@ -110,6 +110,8 @@ USERDATA
 
 }
 
+/*
+
 resource "aws_launch_configuration" "eks" {
   associate_public_ip_address = true
   #iam_instance_profile        = aws_iam_instance_profile.node.name
@@ -145,3 +147,4 @@ resource "aws_autoscaling_group" "eks" {
   }
 }
 
+*/
